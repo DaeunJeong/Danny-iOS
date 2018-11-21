@@ -20,16 +20,13 @@ class ViewController: UIViewController {
     var isTypingNumber = false
     var isPlus = false
     var isMinus = false
-    
     var sum: Int = 0
-    var num: Int = 0
     
     @IBAction func numberClick(_ numberBtn: UIButton) {
-        var number = numberBtn.titleLabel?.text
         if isTypingNumber {
-            resultLabel.text = resultLabel.text! + number!
+            resultLabel.text = resultLabel.text! + (numberBtn.titleLabel?.text)!
         } else {
-            resultLabel.text = number!
+            resultLabel.text = (numberBtn.titleLabel?.text)!
             isTypingNumber = true
         }
     }
@@ -67,18 +64,13 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: UIButton) {
         sum = 0
-        num = 0
         resultLabel.text = ""
         isTypingNumber = false
         isMinus = false
         isPlus = false
-        
     }
     
     @IBAction func deleteNumber(_ sender: UIButton) {
         resultLabel.text = String((resultLabel.text?.dropLast())!)
     }
-    
-
 }
-
