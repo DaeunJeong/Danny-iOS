@@ -15,6 +15,8 @@
 		C93F31502269D91A00BC63B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93F314F2269D91A00BC63B4 /* Assets.xcassets */; };
 		C93F31532269D91A00BC63B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93F31512269D91A00BC63B4 /* LaunchScreen.storyboard */; };
 		C93F315E2269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F315D2269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.swift */; };
+		C9736DD322706C13008900D1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9736DD222706C13008900D1 /* ViewModel.swift */; };
+		C9736DD522706C1F008900D1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9736DD422706C1F008900D1 /* Model.swift */; };
 		F8256CD2C94B143CDA3E13DA /* Pods_PracticeMVVMRxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6F2DB051FA0FBAF7F5FBE7 /* Pods_PracticeMVVMRxSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,9 @@
 		C93F31592269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PracticeMVVMRxSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93F315D2269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeMVVMRxSwiftTests.swift; sourceTree = "<group>"; };
 		C93F315F2269D91A00BC63B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9736DD222706C13008900D1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C9736DD422706C1F008900D1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C97F604C2270A0A0005344B8 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +81,13 @@
 				8D51D3337762C66DC3E7E732 /* Pods-PracticeMVVMRxSwiftTests.debug.xcconfig */,
 				4AC11A0FB2C8D2A4663F9DB7 /* Pods-PracticeMVVMRxSwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		C3CD7E5443C06F8FDDA088D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C97F604C2270A0A0005344B8 /* Kingfisher.framework */,
 				C8D5CCB875F3B849F99929FB /* Pods_PracticeMVVMRxSwift.framework */,
 				BB6F2DB051FA0FBAF7F5FBE7 /* Pods_PracticeMVVMRxSwiftTests.framework */,
 			);
@@ -119,6 +124,8 @@
 				C93F31512269D91A00BC63B4 /* LaunchScreen.storyboard */,
 				C93F31542269D91A00BC63B4 /* Info.plist */,
 				C93F314C2269D91800BC63B4 /* PracticeMVVMRxSwift.xcdatamodeld */,
+				C9736DD222706C13008900D1 /* ViewModel.swift */,
+				C9736DD422706C1F008900D1 /* Model.swift */,
 			);
 			path = PracticeMVVMRxSwift;
 			sourceTree = "<group>";
@@ -285,7 +292,10 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PracticeMVVMRxSwift/Pods-PracticeMVVMRxSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -295,7 +305,10 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -313,8 +326,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9736DD522706C1F008900D1 /* Model.swift in Sources */,
 				C93F31482269D91800BC63B4 /* ViewController.swift in Sources */,
 				C93F314E2269D91800BC63B4 /* PracticeMVVMRxSwift.xcdatamodeld in Sources */,
+				C9736DD322706C13008900D1 /* ViewModel.swift in Sources */,
 				C93F31462269D91800BC63B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

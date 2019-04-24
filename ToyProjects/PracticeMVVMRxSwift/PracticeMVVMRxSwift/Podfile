@@ -6,7 +6,9 @@ target 'PracticeMVVMRxSwift' do
   use_frameworks!
     pod 'RxDataSources', '~> 3.0'
     pod 'RxSwift',    '~> 4.0'
-    pod 'RxCocoa',    '~> 4.0'	
+    pod 'RxCocoa',    '~> 4.0'
+    pod 'RxAlamofire'
+    pod 'Kingfisher', '~> 5.0'
   # Pods for PracticeMVVMRxSwift
 
   target 'PracticeMVVMRxSwiftTests' do
