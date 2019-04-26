@@ -12,10 +12,4 @@ struct Model: Codable {
     let historicalSiteImagePath: String
     let historicalSiteLocation: String
     let historicalSiteName: String
-    
-    enum CodingKeys: String, CodingKey {
-        case historicalSiteImagePath
-        case historicalSiteLocation
-        case historicalSiteName
-    }
 }

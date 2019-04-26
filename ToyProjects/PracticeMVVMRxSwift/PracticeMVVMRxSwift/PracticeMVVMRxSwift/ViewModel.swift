@@ -14,6 +14,8 @@ import Alamofire
 
 class ViewModel {
     let data: Driver<[Model]>
+    let selectedImagePath = BehaviorRelay<IndexPath>(value: IndexPath(row: 0, section: 0))
+    let selectedSiteName : Observable<String>
 
     init() {
         data = RxAlamofire.requestData(.get, "http://52.199.207.14/main/bla", parameters: nil, encoding: URLEncoding.queryString, headers: ["Content-Type" : "application/json"]).map { (_, data) -> [Model] in
@@ -24,5 +26,10 @@ class ViewModel {
             
             return model
         }.asDriver(onErrorJustReturn: [])
+        
+        selectedSiteName = Observable.combineLatest(data.asObservable(), selectedImagePath.asObservable(),resultSelector: { (data, imagePath) in
+            
+            return data[imagePath.row].historicalSiteName
+        })
     }
 }

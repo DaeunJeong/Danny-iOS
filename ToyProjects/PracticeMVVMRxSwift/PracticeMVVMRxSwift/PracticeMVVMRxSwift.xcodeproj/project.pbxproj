@@ -17,6 +17,7 @@
 		C93F315E2269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93F315D2269D91A00BC63B4 /* PracticeMVVMRxSwiftTests.swift */; };
 		C9736DD322706C13008900D1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9736DD222706C13008900D1 /* ViewModel.swift */; };
 		C9736DD522706C1F008900D1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9736DD422706C1F008900D1 /* Model.swift */; };
+		C975F5AB227283110039ADA6 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C975F5AA227283110039ADA6 /* NextViewController.swift */; };
 		F8256CD2C94B143CDA3E13DA /* Pods_PracticeMVVMRxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6F2DB051FA0FBAF7F5FBE7 /* Pods_PracticeMVVMRxSwiftTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		C93F315F2269D91A00BC63B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9736DD222706C13008900D1 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		C9736DD422706C1F008900D1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C975F5AA227283110039ADA6 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		C97F604C2270A0A0005344B8 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				C93F314C2269D91800BC63B4 /* PracticeMVVMRxSwift.xcdatamodeld */,
 				C9736DD222706C13008900D1 /* ViewModel.swift */,
 				C9736DD422706C1F008900D1 /* Model.swift */,
+				C975F5AA227283110039ADA6 /* NextViewController.swift */,
 			);
 			path = PracticeMVVMRxSwift;
 			sourceTree = "<group>";
@@ -296,7 +299,6 @@
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -309,7 +311,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -327,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9736DD522706C1F008900D1 /* Model.swift in Sources */,
+				C975F5AB227283110039ADA6 /* NextViewController.swift in Sources */,
 				C93F31482269D91800BC63B4 /* ViewController.swift in Sources */,
 				C93F314E2269D91800BC63B4 /* PracticeMVVMRxSwift.xcdatamodeld in Sources */,
 				C9736DD322706C13008900D1 /* ViewModel.swift in Sources */,

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         viewModel.data
             .drive(tableView.rx.items(cellIdentifier: "siteCell")) { _, data, cell in
                 let siteCell = cell as? SiteCell
-                siteCell?.siteImageView.kf.setImage(with: URL(string: data.historicalSiteImagePath))
+                siteCell?.siteImageView.kf.setImage(with: URL(string: data.historicalSiteImagePath), options: [(.processor(BlurImageProcessor(blurRadius: 4))),.processor(ResizingImageProcessor(referenceSize: CGSize(width: 52, height: 16), mode: .aspectFill))])
                 siteCell?.siteNameLabel.text = data.historicalSiteName
                 siteCell?.siteAddressLabel.text = data.historicalSiteLocation
             }
@@ -34,6 +34,15 @@ class ViewController: UIViewController {
         tableView.rx.itemSelected.subscribe { [weak self] indexPath in
             self?.performSegue(withIdentifier: "next", sender: nil)
         }.disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.bind(to: viewModel.selectedImagePath).disposed(by: disposeBag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "next" {
+            let nextVC = segue.destination as? NextViewController
+            nextVC?.viewModel = viewModel
+        }
     }
 }
 
