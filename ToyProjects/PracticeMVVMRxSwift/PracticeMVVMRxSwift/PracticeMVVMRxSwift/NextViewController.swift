@@ -16,8 +16,9 @@ class NextViewController: UIViewController {
     var viewModel = ViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewModel.selectedSiteName.bind(to: siteNameLabel.rx.text).disposed(by: disposeBag
-        )
+        
+        //siteName을 보여주는 label의 text를 viewModel의 selectedSiteName과 bind합니다
+        viewModel.selectedSiteName.bind(to: siteNameLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 }
